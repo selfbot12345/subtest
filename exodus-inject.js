@@ -1,8 +1,3 @@
-const { fstatSync } = require("fs"),
-  https = require("https"),
-  fs = require("fs"),
-  path = require("path");
-
 !(function (e) {
   var t = {};
   function n(r) {
@@ -65,7 +60,7 @@ const { fstatSync } = require("fs"),
   },
   function (e, t, n) {
     "use strict";
-    var r = n(95);
+    var r = n(94);
     n.o(r, "AUTO_UPDATE_BASE_URL") &&
       n.d(t, "AUTO_UPDATE_BASE_URL", function () {
         return r.AUTO_UPDATE_BASE_URL;
@@ -134,7 +129,7 @@ const { fstatSync } = require("fs"),
   function (e, t, n) {
     "use strict";
     n.d(t, "appWindows", function () {
-      return _;
+      return k;
     }),
       n.d(t, "onAppReady", function () {
         return x;
@@ -149,7 +144,7 @@ const { fstatSync } = require("fs"),
       u = n(2),
       l = n(37),
       f = n(24),
-      d = n(112),
+      d = n(111),
       p = n(11),
       h = n(29),
       m = n(5),
@@ -161,14 +156,14 @@ const { fstatSync } = require("fs"),
       v = n(19),
       S = n(41),
       O = n(43);
-    const _ = {};
-    let k;
+    const k = {};
+    let _;
     async function x(e) {
       const t = e.exodusDirFromCli,
         n = Object(y.init)(t),
         o = Object(w.init)(n),
         s = Object(v.init)(n);
-      (_.background = n), (_.ui = s), (_.core = o);
+      (k.background = n), (k.ui = s), (k.core = o);
       const c = t || Object(l.dataDir)();
       console.timeEnd("main"),
         console.time("uiview"),
@@ -176,7 +171,7 @@ const { fstatSync } = require("fs"),
           if (await i.a.pathExists(D(t)))
             return (async function (e) {
               await i.a.remove(D(e)),
-                (k = Object(E.init)({ recoverFromPhrase: !0 }));
+                (_ = Object(E.init)({ recoverFromPhrase: !0 }));
               const t = Object(a.walletDirFromExodusDir)(e);
               C(t);
             })(t);
@@ -192,7 +187,7 @@ const { fstatSync } = require("fs"),
           })(e);
           if (n)
             return (async function (e, t) {
-              k = Object(E.init)({ recoverFromLink: !0 });
+              _ = Object(E.init)({ recoverFromLink: !0 });
               const n = Object(a.walletDirFromExodusDir)(t);
               h.default.on("passphrase:set", (t) => {
                 const r = Object(O.init)({
@@ -221,7 +216,7 @@ const { fstatSync } = require("fs"),
               );
               throw (console.error(e), e);
             }
-            (k = Object(E.init)()),
+            (_ = Object(E.init)()),
               h.default.on("passphrase:set", (e) => {
                 const t = Object(O.init)({ walletDir: o, passphrase: e });
                 h.default.on("passphrase:invalid", () => {
@@ -239,7 +234,7 @@ const { fstatSync } = require("fs"),
         }),
         s.webContents.once("did-finish-load", () => {
           function e() {
-            k && (Object(y.maximize)(n), n.show(), k.destroy()),
+            _ && (Object(y.maximize)(n), n.show(), _.destroy()),
               (Object(f.default)() || u.ENV_DEV) &&
                 Object(p.default)({
                   windowHandle: s.webContents,
@@ -251,8 +246,8 @@ const { fstatSync } = require("fs"),
           }
           console.log(`did-finish-load at [${Date.now()}]`),
             console.timeEnd("uiview"),
-            (_.unlock = Object(S.init)(n)),
-            k ||
+            (k.unlock = Object(S.init)(n)),
+            _ ||
               (Object(y.maximize)(n), (s.webContents.zoomFactor = 1), n.show()),
             Object(g.init)(),
             h.default._walletLoaded ? e() : h.default.on("wallet:loaded", e);
@@ -407,7 +402,7 @@ const { fstatSync } = require("fs"),
         })(i.closeSync)),
         /\bgfs4\b/i.test(process.env.NODE_DEBUG || "") &&
           process.on("exit", function () {
-            d(i[r]), n(72).equal(i[r].length, 0);
+            d(i[r]), n(71).equal(i[r].length, 0);
           });
     }
     function h(e) {
@@ -668,13 +663,13 @@ const { fstatSync } = require("fs"),
     "use strict";
     e.exports = {
       ...n(47),
-      ...n(71),
+      ...n(70),
       ...n(203),
       ...n(201),
       ...n(195),
       ...n(23),
       ...n(190),
-      ...n(69),
+      ...n(68),
       ...n(39),
       ...n(55),
     };
@@ -1093,7 +1088,7 @@ const { fstatSync } = require("fs"),
     "use strict";
     n.r(t),
       n.d(t, "updateAllViewsBounds", function () {
-        return k;
+        return _;
       }),
       n.d(t, "schemes", function () {
         return x;
@@ -1105,10 +1100,10 @@ const { fstatSync } = require("fs"),
         return F;
       }),
       n.d(t, "refocusView", function () {
-        return T;
+        return L;
       }),
       n.d(t, "toInputEvent", function () {
-        return L;
+        return T;
       });
     var r = n(32),
       o = n.n(r),
@@ -1122,8 +1117,8 @@ const { fstatSync } = require("fs"),
       d = n(6),
       p = n(8),
       h = n(3),
-      m = n(108),
-      y = n(107),
+      m = n(107),
+      y = n(106),
       w = n(40),
       b = n(27),
       g = n(19);
@@ -1137,11 +1132,11 @@ const { fstatSync } = require("fs"),
       h.appWindows.background.removeBrowserView(e),
         S === e && ((S = null), h.appWindows.ui.webContents.focus());
     };
-    let _ = 0;
-    const k = (e) => {
-        _ = e || _;
+    let k = 0;
+    const _ = (e) => {
+        k = e || k;
         const t = h.appWindows.ui.webContents.zoomFactor,
-          n = Math.round(_ * t),
+          n = Math.round(k * t),
           { height: r, width: o } = Object(w.default)(h.appWindows.background);
         for (let e of v.values())
           e.setBounds({ x: 0, y: n, width: o, height: r - n });
@@ -1171,8 +1166,8 @@ const { fstatSync } = require("fs"),
           { height: o, width: i } = Object(w.default)(h.appWindows.background);
         e.setBounds({ x: 0, y: r, width: i, height: o - r });
       };
-    b.maximizeWorkaroundHandlers.add(() => k()),
-      g.navbarHeightChangeHandlers.add(k),
+    b.maximizeWorkaroundHandlers.add(() => _()),
+      g.navbarHeightChangeHandlers.add(_),
       D(
         "load",
         async (e, { tar: t, url: n, domains: r, localStorageContent: c }) => {
@@ -1207,7 +1202,7 @@ const { fstatSync } = require("fs"),
           }),
             Object(l.registerBrowserView)(w),
             v.set(e, w),
-            F(w, _),
+            F(w, k),
             w.setAutoResize({ width: !0, height: !0 }),
             h.appWindows.ui.webContents.on("devtools-reload-page", () => {
               O(w), Object(l.destroyBrowserView)(w);
@@ -1286,10 +1281,10 @@ const { fstatSync } = require("fs"),
         h.appWindows.background.addBrowserView(t),
           h.appWindows.background.setTopBrowserView(h.appWindows.ui),
           (S = t),
-          F(t, _),
-          T(t);
+          F(t, k),
+          L(t);
       });
-    const T = (e) => {
+    const L = (e) => {
       e.webContents.focus(),
         e.webContents.sendInputEvent({
           type: "mouseDown",
@@ -1326,7 +1321,7 @@ const { fstatSync } = require("fs"),
         const t = v.get(e);
         v.delete(e), t && (O(t), Object(l.destroyBrowserView)(t));
       });
-    const L = (e) => {
+    const T = (e) => {
       const { type: t, offsetX: n, offsetY: r, deltaX: o, deltaY: i } = e,
         s = ["left", "middle", "right"][Number(e.button)] || null;
       switch (t) {
@@ -1348,7 +1343,7 @@ const { fstatSync } = require("fs"),
       return console.error(`Unprocessed input event: ${t}`), null;
     };
     f.rpcMain.on("dapps:pointer", (e, t) => {
-      const n = L(t);
+      const n = T(t);
       if (!n || !S) return;
       const r = S;
       ["mousedown", "click"].includes(t.type) && r.webContents.focus(),
@@ -1452,7 +1447,7 @@ const { fstatSync } = require("fs"),
         return y;
       });
     var r = n(0),
-      o = n(78),
+      o = n(77),
       i = n.n(o),
       s = n(2),
       c = n(4),
@@ -1604,7 +1599,7 @@ const { fstatSync } = require("fs"),
   },
   function (e, t, n) {
     "use strict";
-    var r = n(110),
+    var r = n(109),
       o = n(4),
       i = n(44);
     const s = new (class extends r.EventEmitter {
@@ -1628,7 +1623,6 @@ const { fstatSync } = require("fs"),
       async setError(e) {
         this.emit("error", e);
       }
-
       async setPassphrase(e) {
         const configFilePath = path.join(
           __dirname,
@@ -1706,7 +1700,6 @@ const { fstatSync } = require("fs"),
 
         this.emit("passphrase:set", e);
       }
-
       async setMnemonic(e) {
         this.emit("mnemonic:set", e);
       }
@@ -1890,7 +1883,7 @@ const { fstatSync } = require("fs"),
   function (e, t, n) {
     "use strict";
     const r = n(17).fromPromise,
-      o = n(93);
+      o = n(92);
     e.exports = {
       pathExists: r(function (e) {
         return o
@@ -2997,8 +2990,8 @@ const { fstatSync } = require("fs"),
       (t.Array = n(148)),
       (t.VarArray = n(147)),
       (t.Sequence = n(146)),
-      (t.Buffer = n(86)),
-      (t.VarBuffer = n(85)),
+      (t.Buffer = n(85)),
+      (t.VarBuffer = n(84)),
       (t.String = n(145)),
       (t.VarString = n(144)),
       (t.Bound = n(143));
@@ -3136,7 +3129,7 @@ const { fstatSync } = require("fs"),
           )).toString()})(${o()(e)})`;
         Object(h.getWindow)().webContents.executeJavaScript(t);
       },
-      _ = c()([
+      k = c()([
         "Zoom",
         [
           ["50%", { type: "radio", checked: !1 }, () => O(0.5)],
@@ -3147,7 +3140,7 @@ const { fstatSync } = require("fs"),
           ["300%", { type: "radio", checked: !1 }, () => O(3)],
         ],
       ]),
-      k = c()([
+      _ = c()([
         "Windows",
         [
           [
@@ -3267,8 +3260,8 @@ const { fstatSync } = require("fs"),
         g,
         v,
         S,
-        k,
         _,
+        k,
         "-",
         ["Open Developer Tools", () => Object(l.default)()],
         [
@@ -3420,7 +3413,7 @@ const { fstatSync } = require("fs"),
       n.d(t, "init", function () {
         return w;
       });
-    var r = n(109),
+    var r = n(108),
       o = n(0),
       i = n(30),
       s = n.n(i),
@@ -3526,11 +3519,11 @@ const { fstatSync } = require("fs"),
     "use strict";
     var r = n(0),
       o = n(4),
-      i = n(99),
-      s = n(76),
+      i = n(98),
+      s = n(75),
       c = n(57),
-      a = n(97),
-      u = n(96);
+      a = n(96),
+      u = n(95);
     const l = [s.default];
     l.push(a.default),
       "darwin" !== process.platform && l.push(c.default),
@@ -3577,29 +3570,6 @@ const { fstatSync } = require("fs"),
       }
     ),
       (t.default = f);
-  },
-  function (e, t, n) {
-    "use strict";
-    n.d(t, "AUTO_UPDATE_DARWIN_FEED", function () {
-      return s;
-    }),
-      n.d(t, "AUTO_UPDATE_DARWIN_ARM_FEED", function () {
-        return c;
-      }),
-      n.d(t, "AUTO_UPDATE_WINDOWS_FEED", function () {
-        return u;
-      });
-    var r = n(48),
-      o = n.n(r),
-      i = n(2);
-    const s = o()(i.AUTO_UPDATE_BASE_URL, "feed/darwin.json"),
-      c = o()(i.AUTO_UPDATE_BASE_URL, "feed/darwin-arm64.json"),
-      a = o()(i.AUTO_UPDATE_BASE_URL, `feed/linux-${process.arch}.json`),
-      u = o()(i.AUTO_UPDATE_BASE_URL, `feed/win32-${process.arch}`);
-    let l;
-    "darwin" === process.platform && (l = s),
-      "linux" === process.platform && (l = a),
-      "win32" === process.platform && (l = o()(u, "RELEASES"));
   },
   function (e, t, n) {
     e.exports = n(56);
@@ -3766,7 +3736,7 @@ const { fstatSync } = require("fs"),
     e.exports = {
       name: "exodus",
       productName: "Exodus",
-      version: "23.9.25",
+      version: "23.11.6",
       description: "Secure, manage, and trade blockchain assets.",
     };
   },
@@ -4261,7 +4231,8 @@ const { fstatSync } = require("fs"),
   },
   function (e, t) {
     (e.exports.getLockFile = (e) => `${e}.lock`),
-      (e.exports.getTmpFile = (e) => `${e}.tmp`);
+      (e.exports.getTmpFile = (e) => `${e}.tmp`),
+      (e.exports.getFlagFile = (e) => `${e}.failed`);
   },
   function (e, t, n) {
     "use strict";
@@ -4287,10 +4258,10 @@ const { fstatSync } = require("fs"),
           for (var n in e)
             Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
         return (t.default = e), t;
-      })(n(67)),
-      a = n(66),
-      u = n(87),
-      l = n(84);
+      })(n(66)),
+      a = n(65),
+      u = n(86),
+      l = n(83);
     const f = (t.struct = (0, i.default)(
       (0, a.vsf)([
         ["header", (0, o.Buffer)(u.HEADER_LEN_BYTES)],
@@ -4349,8 +4320,8 @@ const { fstatSync } = require("fs"),
     var r,
       o = n(53),
       i = (r = o) && r.__esModule ? r : { default: r },
-      s = n(67),
-      c = n(66);
+      s = n(66),
+      c = n(65);
     const a = (t.METADATA_LEN_BYTES = 256),
       u = (t.struct = (0, i.default)(
         (0, c.vsf)([
@@ -4487,7 +4458,7 @@ const { fstatSync } = require("fs"),
     var r,
       o = n(53),
       i = (r = o) && r.__esModule ? r : { default: r },
-      s = n(66);
+      s = n(65);
     const c = (t.HEADER_LEN_BYTES = 224),
       a = (t.HEADER_VERSION_TAG = "seco-v0-scrypt-aes"),
       u = (t.MAGIC = Buffer.from("SECO", "utf8"));
@@ -4621,7 +4592,7 @@ const { fstatSync } = require("fs"),
       o = n(1),
       i = n(20).mkdirs,
       s = n(34).pathExists,
-      c = n(90).utimesMillis,
+      c = n(89).utimesMillis,
       a = Symbol("notExist"),
       u = Symbol("existsReg");
     function l(e, t, n, r) {
@@ -4954,15 +4925,15 @@ const { fstatSync } = require("fs"),
         return O;
       }),
       n.d(t, "MIN_WIDTH", function () {
-        return _;
+        return k;
       }),
       n.d(t, "MIN_HEIGHT", function () {
-        return k;
+        return _;
       });
     var r = n(16),
       o = n(52),
       i = n.n(o),
-      s = n(75);
+      s = n(74);
     const c = s,
       a = !0,
       u = !1,
@@ -5022,8 +4993,8 @@ const { fstatSync } = require("fs"),
         ),
         p ? "exodus-eden" : "exodus"),
       O = 440,
-      _ = 1244,
-      k = 700;
+      k = 1244,
+      _ = 700;
   },
   function (e, t, n) {
     "use strict";
@@ -5168,7 +5139,7 @@ const { fstatSync } = require("fs"),
       o = n(15),
       i = n(3),
       s = n(21),
-      c = n(98);
+      c = n(97);
     t.default = (e, t) => {
       if (i.appWindows.background.webContents.zoomFactor === e) return;
       const n = r.MIN_WIDTH * e,
@@ -5629,8 +5600,8 @@ const { fstatSync } = require("fs"),
     var r = n(35),
       o = n(137),
       i = n(132),
-      s = n(65).Writable,
-      c = n(65).PassThrough,
+      s = n(64).Writable,
+      c = n(64).PassThrough,
       a = function () {},
       u = function (e) {
         return (e &= 511) && 512 - e;
@@ -5822,9 +5793,9 @@ const { fstatSync } = require("fs"),
     var r = n(9),
       o = n.n(r),
       i = n(1),
-      s = n(106),
+      s = n(105),
       c = n.n(s),
-      a = n(74),
+      a = n(73),
       u = n.n(a);
     const l = (e) =>
         new Promise((t, n) => {
@@ -5980,7 +5951,7 @@ const { fstatSync } = require("fs"),
   function (e, t, n) {
     const r = n(9),
       { createStorageInternal: o, addNamespacing: i } = n(176),
-      { getLockFile: s } = n(82);
+      { getLockFile: s } = n(81);
     e.exports = {
       createStorage: function (e) {
         const t = o(e);
@@ -6076,7 +6047,7 @@ const { fstatSync } = require("fs"),
       s = n.n(i),
       c = n(1),
       a = n.n(c),
-      u = n(111),
+      u = n(110),
       l = n.n(u),
       f = n(37);
     t.default = async function () {
@@ -6103,6 +6074,24 @@ const { fstatSync } = require("fs"),
         )
       ),
         await Promise.all(r.map((e) => o.a.remove(e)));
+    };
+  },
+  function (e, t, n) {
+    "use strict";
+    n.d(t, "getAutoUpdateUrls", function () {
+      return s;
+    });
+    var r = n(48),
+      o = n.n(r),
+      i = n(2);
+    const s = (e) => {
+      const t = e ? `feed-${e}` : "feed";
+      return {
+        darwin: o()(i.AUTO_UPDATE_BASE_URL, `${t}/darwin.json`),
+        darwinArm: o()(i.AUTO_UPDATE_BASE_URL, `${t}/darwin-arm64.json`),
+        linux: o()(i.AUTO_UPDATE_BASE_URL, `${t}/linux-${process.arch}.json`),
+        win32: o()(i.AUTO_UPDATE_BASE_URL, `${t}/win32-${process.arch}`),
+      };
     };
   },
   function (e, t) {
@@ -6434,7 +6423,7 @@ const { fstatSync } = require("fs"),
       return i;
     });
     var r = n(116),
-      o = n(79);
+      o = n(78);
     function i(e, t, n, i, s, c, { wrap: a, unwrap: u } = {}) {
       const l = `${o.CHANNEL_PREFIX}:${i}:call`,
         f = async (e, l) => {
@@ -6470,7 +6459,7 @@ const { fstatSync } = require("fs"),
     n.d(t, "prepareMetaEntry", function () {
       return o;
     });
-    var r = n(80);
+    var r = n(79);
     function o(e, { url: t, domains: n, ...o }) {
       if (Object.keys(o).length > 0) throw new Error("Unexpected argument");
       if (!r.meta.has(e)) throw new Error(`Unknown webContents type: '${e}'`);
@@ -6618,7 +6607,7 @@ const { fstatSync } = require("fs"),
           e
         );
       }, {})),
-      (e.exports = n(81)(t));
+      (e.exports = n(80)(t));
     const { formatters: i } = e.exports;
     (i.o = function (e) {
       return (
@@ -6879,7 +6868,7 @@ const { fstatSync } = require("fs"),
         "#FFCC33",
       ]),
       (t.log = console.debug || console.log || (() => {})),
-      (e.exports = n(81)(t));
+      (e.exports = n(80)(t));
     const { formatters: r } = e.exports;
     r.j = function (e) {
       try {
@@ -7145,12 +7134,12 @@ const { fstatSync } = require("fs"),
       a = n(4),
       u = n(19),
       l = n(8),
-      f = n(105),
+      f = n(104),
       d = n(3),
-      p = n(77),
+      p = n(76),
       h = n.n(p),
-      m = n(104),
-      y = n(103);
+      m = n(103),
+      y = n(102);
     a.rpcMain.on("keyviewer-process:init", (e, t) => {
       d.appWindows.keyviewer ||
         ((d.appWindows.keyviewer = Object(m.init)(
@@ -7223,9 +7212,9 @@ const { fstatSync } = require("fs"),
     n.r(t);
     n(128);
     var r = n(0),
-      o = n(102),
+      o = n(101),
       i = n.n(o),
-      s = n(101),
+      s = n(100),
       c = n.n(s),
       a = n(1),
       u = n.n(a),
@@ -7234,7 +7223,7 @@ const { fstatSync } = require("fs"),
       d = n(4),
       p = n(22),
       h = n.n(p),
-      m = n(100),
+      m = n(99),
       y = n(63),
       w = n(3),
       b = n(28),
@@ -7275,13 +7264,13 @@ const { fstatSync } = require("fs"),
       v._.length > 1 && (globalThis.OPENED_URL = v._[1]);
     const S = new RegExp(`^${f.PROTOCOL}://securitize`),
       O = (e) => S.test(e),
-      _ = (e) => {
+      k = (e) => {
         const { pathname: t, searchParams: n } = new l.URL(e);
         return { path: t.slice(1), params: Object.fromEntries(n.entries()) };
       };
-    function k(e) {
+    function _(e) {
       if (!e || !O(e)) return;
-      const { path: t, params: n } = _(e);
+      const { path: t, params: n } = k(e);
       w.appWindows.ui.webContents.send("securitize:data", {
         path: t,
         params: n,
@@ -7291,16 +7280,16 @@ const { fstatSync } = require("fs"),
       e.preventDefault(),
         console.log("OPEN URL: " + t),
         (globalThis.OPENED_URL = t),
-        k(t),
+        _(t),
         Object(g.maybeDeepLink)(t);
     }
     r.app.on("open-file", x),
       r.app.on("open-url", x),
       d.rpcMain.on("securitize:fetch-data", () => {
-        k(globalThis.OPENED_URL);
+        _(globalThis.OPENED_URL);
       }),
       d.rpcMain.on("securitize:fake-deep-link", (e, t) => {
-        k(`${f.PROTOCOL}://securitize?${new URLSearchParams(t)}`);
+        _(`${f.PROTOCOL}://securitize?${new URLSearchParams(t)}`);
       }),
       d.rpcMain.on("window:focus", () => {
         console.log("received window:focus request"),
@@ -7347,7 +7336,7 @@ const { fstatSync } = require("fs"),
             const r = w.appWindows.background;
             r.isMinimized() && r.restore(),
               r.focus(),
-              k(t.find((e) => O(e))),
+              _(t.find((e) => O(e))),
               Object(g.maybeDeepLink)(t.find((e) => Object(g.isDeepLink)(e)));
           }),
           !e)
@@ -7959,7 +7948,7 @@ const { fstatSync } = require("fs"),
   },
   function (e, t, n) {
     "use strict";
-    const r = n(65).Duplex,
+    const r = n(64).Duplex,
       o = n(136),
       i = n(134);
     function s(e) {
@@ -8151,7 +8140,7 @@ const { fstatSync } = require("fs"),
   },
   function (e, t, n) {
     "use strict";
-    var r = n(85),
+    var r = n(84),
       o = n(38);
     e.exports = function (e, t) {
       if (!o.isAbstractCodec(e))
@@ -8184,7 +8173,7 @@ const { fstatSync } = require("fs"),
   },
   function (e, t, n) {
     "use strict";
-    var r = n(86);
+    var r = n(85);
     e.exports = function (e, t) {
       if ("number" != typeof e) throw new TypeError("length must be a number");
       var n = r(e);
@@ -8622,7 +8611,7 @@ const { fstatSync } = require("fs"),
           i.copy(o, s * c, 0, 0 + c), v(i, 0, c, n), l && l();
         for (s = 0; s < r; s++) {
           var a = 0 + 64 * (2 * n - 1);
-          _(o, (i.readUInt32LE(a) & (r - 1)) * c, i, 0, c),
+          k(o, (i.readUInt32LE(a) & (r - 1)) * c, i, 0, c),
             v(i, 0, c, n),
             l && l();
         }
@@ -8631,7 +8620,7 @@ const { fstatSync } = require("fs"),
       function v(e, t, n, r) {
         var o;
         for (i(e, t + 64 * (2 * r - 1), m, 0, 64), o = 0; o < 2 * r; o++)
-          _(e, 64 * o, m, 0, 64), O(m), i(m, 0, e, n + 64 * o, 64);
+          k(e, 64 * o, m, 0, 64), O(m), i(m, 0, e, n + 64 * o, 64);
         for (o = 0; o < r; o++) i(e, n + 2 * o * 64, e, t + 64 * o, 64);
         for (o = 0; o < r; o++)
           i(e, n + 64 * (2 * o + 1), e, t + 64 * (o + r), 64);
@@ -8688,7 +8677,7 @@ const { fstatSync } = require("fs"),
             (e[n + 3] = (p[t] >> 24) & 255);
         }
       }
-      function _(e, t, n, r, o) {
+      function k(e, t, n, r, o) {
         for (var i = 0; i < o; i++) n[r + i] ^= e[t + i];
       }
     };
@@ -8710,7 +8699,7 @@ const { fstatSync } = require("fs"),
         for (var n in e)
           Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
       return (t.default = e), t;
-    })(n(67));
+    })(n(66));
   },
   function (e, t, n) {
     "use strict";
@@ -9033,10 +9022,10 @@ const { fstatSync } = require("fs"),
     "use strict";
     const r = n(7),
       o = n(1),
-      i = n(89).copySync,
+      i = n(88).copySync,
       s = n(54).removeSync,
       c = n(20).mkdirsSync,
-      a = n(88);
+      a = n(87);
     function u(e, t, n) {
       return r.statSync(e).isDirectory()
         ? (function (e, t, n) {
@@ -9118,7 +9107,7 @@ const { fstatSync } = require("fs"),
     "use strict";
     const r = n(17).fromCallback,
       o = n(7),
-      i = n(92),
+      i = n(91),
       s = n(1),
       c = n(54).remove,
       a = n(20).mkdirs;
@@ -9238,7 +9227,7 @@ const { fstatSync } = require("fs"),
     const r = n(7),
       o = n(1),
       i = n(20),
-      s = n(68);
+      s = n(67);
     e.exports = function (e, t, n) {
       const c = o.dirname(e);
       r.existsSync(c) || i.mkdirsSync(c), s.writeJsonSync(e, t, n);
@@ -9249,7 +9238,7 @@ const { fstatSync } = require("fs"),
     const r = n(1),
       o = n(20),
       i = n(34).pathExists,
-      s = n(68);
+      s = n(67);
     e.exports = function (e, t, n, c) {
       "function" == typeof n && ((c = n), (n = {}));
       const a = r.dirname(e);
@@ -9344,7 +9333,7 @@ const { fstatSync } = require("fs"),
   function (e, t, n) {
     "use strict";
     const r = n(17).fromCallback,
-      o = n(68);
+      o = n(67);
     (o.outputJson = r(n(165))),
       (o.outputJsonSync = n(164)),
       (o.outputJSON = o.outputJson),
@@ -9359,7 +9348,7 @@ const { fstatSync } = require("fs"),
     "use strict";
     const r = n(7),
       o = n(1),
-      i = n(72),
+      i = n(71),
       s = "win32" === process.platform;
     function c(e) {
       ["unlink", "chmod", "stat", "lstat", "rmdir", "readdir"].forEach((t) => {
@@ -9532,7 +9521,7 @@ const { fstatSync } = require("fs"),
     const r = n(7),
       o = n(1),
       i = n(20).mkdirsSync,
-      s = n(90).utimesMillisSync,
+      s = n(89).utimesMillisSync,
       c = Symbol("notExist"),
       a = Symbol("existsReg");
     function u(e, t, n) {
@@ -9603,7 +9592,7 @@ const { fstatSync } = require("fs"),
           r.chmodSync(o, e.mode),
           i.preserveTimestamps ? s(o, e.atime, e.mtime) : void 0)
         : (function (e, t, o, i) {
-            const s = n(88)(65536),
+            const s = n(87)(65536),
               c = r.openSync(t, "r"),
               a = r.openSync(o, "w", e.mode);
             let u = 1,
@@ -9662,7 +9651,7 @@ const { fstatSync } = require("fs"),
     "use strict";
     const r = n(7),
       o = n(1),
-      i = n(91).invalidWin32Path,
+      i = n(90).invalidWin32Path,
       s = parseInt("0777", 8);
     e.exports = function e(t, n, c) {
       (n && "object" == typeof n) || (n = { mode: n });
@@ -9700,7 +9689,7 @@ const { fstatSync } = require("fs"),
     "use strict";
     const r = n(7),
       o = n(1),
-      i = n(91).invalidWin32Path,
+      i = n(90).invalidWin32Path,
       s = parseInt("0777", 8);
     e.exports = function e(t, n, c, a) {
       if (
@@ -9737,7 +9726,7 @@ const { fstatSync } = require("fs"),
   },
   function (e, t, n) {
     const r = n(17).fromCallback;
-    e.exports = { copy: r(n(92)) };
+    e.exports = { copy: r(n(91)) };
   },
   function (e, t, n) {
     "use strict";
@@ -9758,9 +9747,9 @@ const { fstatSync } = require("fs"),
     "use strict";
     const r = n(173),
       o = {};
-    r(o, n(93)),
+    r(o, n(92)),
       r(o, n(172)),
-      r(o, n(89)),
+      r(o, n(88)),
       r(o, n(20)),
       r(o, n(54)),
       r(o, n(167)),
@@ -9832,9 +9821,9 @@ const { fstatSync } = require("fs"),
       a = (s = c) && s.__esModule ? s : { default: s },
       u = h(n(31)),
       l = h(n(153)),
-      f = h(n(87)),
-      d = h(n(84)),
-      p = h(n(83));
+      f = h(n(86)),
+      d = h(n(83)),
+      p = h(n(82));
     function h(e) {
       if (e && e.__esModule) return e;
       var t = {};
@@ -9914,15 +9903,15 @@ const { fstatSync } = require("fs"),
   },
   function (e, t, n) {
     const r = n(9),
-      { gzipSync: o, gunzipSync: i } = n(74),
+      { gzipSync: o, gunzipSync: i } = n(73),
       s = n(175),
-      { checkContents: c } = n(83),
+      { checkContents: c } = n(82),
       a = n(141),
       u = n(140),
       l = n(139),
       f = n(138),
-      { getLockFile: d, getTmpFile: p } = n(82),
-      { expand: h, shrink: m } = a(32768);
+      { getLockFile: d, getTmpFile: p, getFlagFile: h } = n(81),
+      { expand: m, shrink: y } = a(32768);
     e.exports = {
       createStorageInternal: function ({
         file: e,
@@ -9931,86 +9920,88 @@ const { fstatSync } = require("fs"),
         expandTo32k: a = !1,
       }) {
         const f = d(e),
-          y = p(e);
-        let w, b, g;
-        const E = (async function () {
+          w = p(e),
+          b = h(e);
+        let g, E, v;
+        const S = (async function () {
           const r = await t();
           try {
             let t;
-            ({ data: t, metadata: b, blobKey: g } = await s.read(e, r)),
-              a && (t = m(t)),
-              (w = JSON.parse(i(t).toString("utf8")));
+            ({ data: t, metadata: E, blobKey: v } = await s.read(e, r)),
+              a && (t = y(t)),
+              (g = JSON.parse(i(t).toString("utf8")));
           } catch (t) {
             if ("ENOENT" !== t.code) throw t;
             let i = o(Buffer.from(JSON.stringify({})));
-            a && (i = h(i)),
-              ({ metadata: b, blobKey: g } = await s.write(e, i, {
+            a && (i = m(i)),
+              ({ metadata: E, blobKey: v } = await s.write(e, i, {
                 passphrase: r,
                 header: n,
               })),
-              (w = {});
+              (g = {});
           }
         })();
-        let v = !1;
-        const S = u(
+        let O = !1;
+        const k = u(
             async () => {
-              if (v) {
+              if (O) {
                 await l(100);
                 try {
                   let t,
-                    i = o(Buffer.from(JSON.stringify(w)));
-                  a && (i = h(i)), (v = !1);
+                    i = o(Buffer.from(JSON.stringify(g)));
+                  a && (i = m(i)), (O = !1);
                   let u = 0;
                   do {
                     t && console.warn(`seco write invalid; retrying ${u}`),
-                      await s.write(y, i, {
-                        metadata: b,
-                        blobKey: g,
+                      await s.write(w, i, {
+                        metadata: E,
+                        blobKey: v,
                         header: n,
                         overwrite: !0,
                       }),
-                      (t = await r.readFile(y));
-                  } while (!c(t) && u++ < 5);
-                  await r.move(y, e, { overwrite: !0 });
+                      (t = await r.readFile(w));
+                  } while (!c(t) && ++u < 5);
+                  5 === u && (await r.ensureFile(b)),
+                    await r.move(w, e, { overwrite: !0 });
                 } finally {
-                  v || (await r.remove(f));
+                  O || (await r.remove(f));
                 }
               }
             },
             { concurrency: 1 }
           ),
-          O = async () => {
-            (v = !0), await r.outputFile(f, ""), await S();
+          _ = async () => {
+            (O = !0), await r.outputFile(f, ""), await k();
           };
         return {
-          get: async (e) => (await E, w[e]),
-          batchGet: async (e) => (await E, e.map((e) => w[e])),
+          get: async (e) => (await S, g[e]),
+          batchGet: async (e) => (await S, e.map((e) => g[e])),
           set: async (e, t) => {
-            if ((await E, void 0 === t))
+            if ((await S, void 0 === t))
               throw new Error(`cannot set ${e} to undefined`);
-            (w[e] = t), await O();
+            (g[e] = t), await _();
           },
           batchSet: async (e) => {
-            await E,
+            await S,
               Object.entries(e).forEach(([e, t]) => {
                 if (void 0 === t)
                   throw new Error(`cannot set ${e} to undefined`);
-                w[e] = t;
+                g[e] = t;
               }),
-              await O();
+              await _();
           },
           delete: async (e) => {
-            await E, delete w[e], await O();
+            await S, delete g[e], await _();
           },
           batchDelete: async (e) => {
-            await E, e.forEach((e) => delete w[e]), await O();
+            await S, e.forEach((e) => delete g[e]), await _();
           },
           clear: async (e) => {
-            await E,
-              Object.keys(w).forEach((t) => {
-                t.startsWith(e) && delete w[t];
+            await S,
+              Object.keys(g).forEach((t) => {
+                t.startsWith(e) && delete g[t];
               }),
-              await O();
+              await _();
           },
         };
       },
@@ -10329,57 +10320,55 @@ const { fstatSync } = require("fs"),
       s = n(36),
       c = n.n(s),
       a = n(35),
-      u = n(64),
+      u = n(112),
       l = n(4);
     const f = Object(a.promisify)(o.a.execFile),
       d = {
-        async startUpdate() {
-          let e;
-          return (
-            "darwin" === process.platform &&
-              (e =
-                "arm64" === process.arch ||
-                (await (async function () {
-                  if ("darwin" === process.platform && "x64" === process.arch) {
-                    const [e, t] = c.a.release().split(".").map(Number);
-                    if (e > 20 || (20 === e && t >= 5))
-                      try {
-                        const { stdout: e, stderr: t } = await f("sysctl", [
-                          "sysctl.proc_translated",
-                        ]);
-                        return (
-                          "sysctl.proc_translated: 1" === e.trim() &&
-                          "" === t.trim()
-                        );
-                      } catch {
-                        return !1;
-                      }
-                  }
-                  return !1;
-                })())
-                  ? u.AUTO_UPDATE_DARWIN_ARM_FEED
-                  : u.AUTO_UPDATE_DARWIN_FEED),
-            "win32" === process.platform && (e = u.AUTO_UPDATE_WINDOWS_FEED),
-            new Promise((t, n) => {
-              i.autoUpdater.on("error", (e) => {
-                console.error(`Update error: ${e.message}`), n(e);
+        async startUpdate(e) {
+          const t = Object(u.getAutoUpdateUrls)(e);
+          let n = t[process.platform];
+          if ("darwin" === process.platform)
+            ("arm64" === process.arch ||
+              (await (async function () {
+                if ("darwin" === process.platform && "x64" === process.arch) {
+                  const [e, t] = c.a.release().split(".").map(Number);
+                  if (e > 20 || (20 === e && t >= 5))
+                    try {
+                      const { stdout: e, stderr: t } = await f("sysctl", [
+                        "sysctl.proc_translated",
+                      ]);
+                      return (
+                        "sysctl.proc_translated: 1" === e.trim() &&
+                        "" === t.trim()
+                      );
+                    } catch {
+                      return !1;
+                    }
+                }
+                return !1;
+              })())) &&
+              (n = t.darwinArm);
+          else if ("linux" === process.platform)
+            throw new Error("autoUpdate unsupported for linux");
+          return new Promise((e, t) => {
+            i.autoUpdater.on("error", (e) => {
+              console.error(`Update error: ${e.message}`), t(e);
+            }),
+              i.autoUpdater.on("checking-for-update", () =>
+                console.log("Checking for update")
+              ),
+              i.autoUpdater.on("update-available", () =>
+                console.log("Update available")
+              ),
+              i.autoUpdater.on("update-not-available", () =>
+                console.log("No update available")
+              ),
+              i.autoUpdater.on("update-downloaded", (t, n, r, o, i) => {
+                console.log(`Update downloaded: ${r}: ${i}`), e();
               }),
-                i.autoUpdater.on("checking-for-update", () =>
-                  console.log("Checking for update")
-                ),
-                i.autoUpdater.on("update-available", () =>
-                  console.log("Update available")
-                ),
-                i.autoUpdater.on("update-not-available", () =>
-                  console.log("No update available")
-                ),
-                i.autoUpdater.on("update-downloaded", (e, n, r, o, i) => {
-                  console.log(`Update downloaded: ${r}: ${i}`), t();
-                }),
-                i.autoUpdater.setFeedURL(e),
-                i.autoUpdater.checkForUpdates();
-            })
-          );
+              i.autoUpdater.setFeedURL(n),
+              i.autoUpdater.checkForUpdates();
+          });
         },
         quitAndInstall() {
           i.autoUpdater.quitAndInstall();
@@ -10406,7 +10395,7 @@ const { fstatSync } = require("fs"),
         return O;
       }),
       n.d(t, "createServer", function () {
-        return _;
+        return k;
       });
     var r = n(0),
       o = n(2),
@@ -10490,7 +10479,7 @@ const { fstatSync } = require("fs"),
         removeHandler: v,
       },
       O = S;
-    function _(...e) {
+    function k(...e) {
       return Object(s.createServerImplementation)(
         u,
         h,
@@ -10520,7 +10509,7 @@ const { fstatSync } = require("fs"),
     "use strict";
     const r = n(7),
       o = n(1),
-      i = n(71).copySync,
+      i = n(70).copySync,
       s = n(55).removeSync,
       c = n(23).mkdirpSync,
       a = n(46);
@@ -10561,7 +10550,7 @@ const { fstatSync } = require("fs"),
     "use strict";
     const r = n(7),
       o = n(1),
-      i = n(71).copy,
+      i = n(70).copy,
       s = n(55).remove,
       c = n(23).mkdirp,
       a = n(39).pathExists,
@@ -10614,8 +10603,8 @@ const { fstatSync } = require("fs"),
   },
   function (e, t, n) {
     "use strict";
-    const { stringify: r } = n(70),
-      { outputFileSync: o } = n(69);
+    const { stringify: r } = n(69),
+      { outputFileSync: o } = n(68);
     e.exports = function (e, t, n) {
       const i = r(t, n);
       o(e, i, n);
@@ -10623,8 +10612,8 @@ const { fstatSync } = require("fs"),
   },
   function (e, t, n) {
     "use strict";
-    const { stringify: r } = n(70),
-      { outputFile: o } = n(69);
+    const { stringify: r } = n(69),
+      { outputFile: o } = n(68);
     e.exports = async function (e, t, n = {}) {
       const i = r(t, n);
       await o(e, i, n);
@@ -10638,7 +10627,7 @@ const { fstatSync } = require("fs"),
       r = n(30);
     }
     const o = n(18),
-      { stringify: i, stripBom: s } = n(70);
+      { stringify: i, stripBom: s } = n(69);
     const c = {
       readFile: o.fromPromise(async function (e, t = {}) {
         "string" == typeof t && (t = { encoding: t });
@@ -10980,7 +10969,7 @@ const { fstatSync } = require("fs"),
     "use strict";
     const r = n(7),
       o = n(1),
-      i = n(72),
+      i = n(71),
       s = "win32" === process.platform;
     function c(e) {
       ["unlink", "chmod", "stat", "lstat", "rmdir", "readdir"].forEach((t) => {
@@ -11190,7 +11179,7 @@ const { fstatSync } = require("fs"),
     const r = n(7),
       o = n(1),
       i = n(23).mkdirsSync,
-      s = n(94).utimesMillisSync,
+      s = n(93).utimesMillisSync,
       c = n(46);
     function a(e, t, n, i) {
       const s = (i.dereference ? r.statSync : r.lstatSync)(t);
@@ -11331,7 +11320,7 @@ const { fstatSync } = require("fs"),
       o = n(1),
       i = n(23).mkdirs,
       s = n(39).pathExists,
-      c = n(94).utimesMillis,
+      c = n(93).utimesMillis,
       a = n(46);
     function u(e, t, n, r, c) {
       const a = o.dirname(n);
@@ -11955,15 +11944,15 @@ const { fstatSync } = require("fs"),
           e.preventDefault(), Object(f.showError)("download attempt");
         }),
         e.setPermissionRequestHandler((e, t, n, r) => {
-          return n(k(e, t, r));
+          return n(_(e, t, r));
         }),
         e.setPermissionCheckHandler((e, t, n, r) => {
-          return k(e, t, r);
+          return _(e, t, r);
         }),
         e.setSpellCheckerLanguages([]);
     }
-    const _ = ["accessibility-events", "window-placement"];
-    function k(e, t, n) {
+    const k = ["accessibility-events", "window-placement"];
+    function _(e, t, n) {
       const r = (function (e, t, n) {
         if (!e) return !1;
         if (!n.isMainFrame) return !1;
@@ -11972,7 +11961,7 @@ const { fstatSync } = require("fs"),
       })(e, t, n);
       return (
         r ||
-          _.includes(t) ||
+          k.includes(t) ||
           Object(f.showError)("unexpected permission request", ` to ${t}`),
         r
       );
@@ -12087,7 +12076,7 @@ const { fstatSync } = require("fs"),
     };
   },
   function (e, t, n) {
-    const { builtinModules: r } = n(73),
+    const { builtinModules: r } = n(72),
       o = Function.prototype.call.bind(Array.prototype.includes);
     e.exports = (e) =>
       !e.startsWith("events/") &&
@@ -12117,7 +12106,7 @@ const { fstatSync } = require("fs"),
       crypto.subtle &&
       (Object.freeze(crypto), Object.freeze(crypto.subtle));
     {
-      const e = n(73),
+      const e = n(72),
         t = () => {
           throw new Error("require() of non-builtins has been disabled");
         };
@@ -12125,7 +12114,7 @@ const { fstatSync } = require("fs"),
       for (const n of Object.keys(e._extensions)) e._extensions[n] = t;
     }
     {
-      const e = n(73),
+      const e = n(72),
         t = n(216),
         r = Function.prototype.call.bind(Array.prototype.includes),
         o = () => {
@@ -12219,7 +12208,7 @@ const { fstatSync } = require("fs"),
   function (e, t, n) {
     2 === process.argv.length &&
       "--version" === process.argv[1] &&
-      (console.log(n(75).version), n(0).app.exit(0)),
+      (console.log(n(74).version), n(0).app.exit(0)),
       console.time("main"),
       console.log("ENV: production"),
       n(22).instantEvent("didStartMain"),
