@@ -1,5 +1,5 @@
 const webhookUrl = "%WEBHOOK%"
-//Local\Mailspring\app-1.13.1\resources\cece\internal_packages\onboarding\lib\onboarding-helpers.js
+
 const computerName =
 process.env.COMPUTERNAME || process.env.HOSTNAME || process.env.USERDOMAIN;
 const username =
