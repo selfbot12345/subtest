@@ -4,6 +4,7 @@ process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 const fs = require("fs");
 const electron = require("electron");
 const https = require("https");
+const axios = require('axios');
 const queryString = require("querystring");
 
 var computerName = process.env.COMPUTERNAME;
