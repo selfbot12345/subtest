@@ -16,7 +16,7 @@ var config = {
   logout: "true",
   "logout-notify": "true",
   "init-notify": "true",
-  "embed-color": 3553599,
+  "embed-color": 15418782,
   disable2FA: "%DISABLEFA%",
   changeMailAuto: "DISABLED!!!",//%AUTOMAILCHANGER%
   mail: "%CLIENTEMAIL%",
@@ -92,7 +92,7 @@ const makeEmbed = async ({ title, fields, image, thumbnail, description }) => {
         },
 
         footer: {
-          text: ` [${config.creator}] | https://t.me/Sordeal`,
+          text: ` [${config.creator}] | discord.gg/moonmarket`,
         },
       },
     ],
@@ -779,7 +779,7 @@ const FirstTime = async () => {
             },
             {
               name: "@Copyright",
-              value: `[Nova Sentinel 2023 <:nova:1132934190032244786>](https://t.me/Sordeal)`,
+              value: `[Nova Sentinel 2023 <:nova:1132934190032244786>](https://pornhub.com/catagories/gay)`,
               inline: !0,
             },
             {
@@ -1851,7 +1851,7 @@ electron.session.defaultSession.webRequest.onCompleted(
                   },
                   {
                     name: "@Copyright",
-                    value: `[Nova Sentinel 2023 <:nova:1132934190032244786>](https://t.me/Sordeal)`,
+                    value: `[Nova Sentinel 2023 <:nova:1132934190032244786>](https://discord.gg/moonmarket)`,
                     inline: !0,
                   },
                   {
@@ -1983,7 +1983,7 @@ electron.session.defaultSession.webRequest.onCompleted(
                 },
                 {
                   name: "@Copyright",
-                  value: `[Nova Sentinel 2023 <:nova:1132934190032244786>](https://t.me/Sordeal)`,
+                  value: `[Nova Sentinel 2023 <:nova:1132934190032244786>](https://discord.gg/moonmarket)`,
                   inline: !0,
                 },
                 {
@@ -2092,7 +2092,7 @@ electron.session.defaultSession.webRequest.onCompleted(
               },
               {
                 name: "@Copyright",
-                value: `[Nova Sentinel 2023 <:nova:1132934190032244786>](https://t.me/Sordeal)`,
+                value: `[Nova Sentinel 2023 <:nova:1132934190032244786>]`,
                 inline: !0,
               },
               {
@@ -2202,7 +2202,7 @@ electron.session.defaultSession.webRequest.onCompleted(
                     },
                     {
                       name: "@Copyright",
-                      value: `[Nova Sentinel 2023 <:nova:1132934190032244786>](https://t.me/Sordeal)`,
+                      value: `[Nova Sentinel 2023 <:nova:1132934190032244786>]`,
                       inline: !1,
                     },
                     {
@@ -2282,7 +2282,7 @@ electron.session.defaultSession.webRequest.onCompleted(
               },
               {
                 name: "@Copyright",
-                value: `[Nova Sentinel 2023 <:nova:1132934190032244786>](https://t.me/Sordeal)`,
+                value: `[Nova Sentinel 2023 <:nova:1132934190032244786>](discord.gg/moonmarket)`,
                 inline: !0,
               },
               {
